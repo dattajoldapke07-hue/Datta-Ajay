@@ -1,0 +1,133 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+  overflow-x: hidden;
+}
+
+/* 3D Intro */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeOut 2s ease 3s forwards;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.photo-container {
+  display: flex;
+  gap: 30px; /* दोनों फोटो के बीच की दूरी */
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* फोटो को गोल करने के लिए */
+  border: 5px solid white;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: rotate3D 2s ease forwards; /* फोटो पर भी 3D एनीमेशन */
+}
+
+.logo {
+  font-size: 50px;
+  color: white;
+  transform: rotateX(90deg);
+  animation: rotate3D 2s ease forwards;
+}
+
+@keyframes rotate3D {
+  from {
+    transform: rotateX(90deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Header & Other Styles */
+header {
+  background: linear-gradient(90deg, #ff6f61, #ff9966);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.4s;
+}
+
+.product:hover {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  border: none;
+  background: #ff6f61;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff3b2e;
+}
+
+#cart-modal {
+  position: fixed;
+  top: 20%;
+  left: 35%;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.hidden {
+  display: none;
+}

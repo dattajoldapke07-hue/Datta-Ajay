@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D E-Commerce Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro">
+  <div class="intro-content">
+    <div class="photo-container">
+      <img src="https://i.postimg.cc/T1pzZCQT/IMG-20260317-180159-583.webp" alt="Datta" class="profile-photo">
+      <img src="https://i.postimg.cc/vHWyMSbb/Screenshot-2026-03-23-21-45-01-32-99c04817c0de5652397fc8b56c3b3817.jpg" alt="Ajay" class="profile-photo">
+    </div>
+    <h1 class="logo">🛍️ Datta & Ajay's Store</h1>
+  </div>
+</div>
+
+<header>
+  <h1> My E-Commerce Store</h1>
+  <button onclick="viewCart()">🛒 Cart (<span id="cart-count">00</span>)</button>
+</header>
+
+<section id="products"></section>
+
+<div id="cart-modal" class="hidden">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <h3>Total: ₹<span id="total">00</span></h3>
+  <button onclick="checkout()">Checkout</button>
+  <button onclick="closeCart()">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
